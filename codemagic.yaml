@@ -1,0 +1,18 @@
+workflows:
+  android-build:
+    name: Build NFC Emulator
+    max_build_duration: 20
+    environment:
+      vars:
+        PACKAGE_NAME: "com.seuprojeto.nfcemulator"
+    scripts:
+      - name: Build release APK
+        script: |
+          ./gradlew assembleRelease
+    artifacts:
+      - build/app/outputs/**/*.apk
+    publishing:
+      email:
+        recipients:
+          - "seuemail@gmail.com"
+
