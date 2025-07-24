@@ -3,8 +3,6 @@ workflows:
     name: Android Build
     environment:
       java: 17
-      android:
-        sdk: 34
     scripts:
       - ./gradlew clean build
     artifacts:
