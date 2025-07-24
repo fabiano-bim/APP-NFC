@@ -4,7 +4,7 @@ workflows:
     environment:
       java: 17
     scripts:
-      - ./gradlew clean build
+      - chmod +x ./gradlew     # ✅ Isso dá permissão de execução
+      - ./gradlew clean build  # 🧪 Agora ele vai conseguir rodar
     artifacts:
       - app/build/outputs/**/*.apk
-
